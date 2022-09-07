@@ -4,6 +4,45 @@
   margin: 0px;
 }
 
+:root {
+  --app-main-clr: #d1d7db;
+  --app-primary-clr: #5474b5;
+  --app-primary-dark-clr: #4866a1;
+  --app-primary-hover: #3d5689;
+  --main-chat-clr: #f8f8f8;
+  --primary-title: #41525d;
+  --text-input-backgroundClr: #fff;
+  --message-clr: #111b21;
+  --contact-list-clr: #fff;
+  --message-time-clr: #667781;
+  --contact-name-clr: #111b21;
+  --contact-message-clr: #3b4a54;
+  --chat-logo-title-clr: #41525d;
+  --clr-grey: #f0f2f5;
+  --profile-edit-clr: #f0f2f5;
+  --clr-grey-2: #667781;
+  --clr-grey-3: #8696a0;
+  --clr-icon: #54656f;
+  --clr-black: #111b21;
+  --clr-icon: #54656f;
+  --clr-icon-2: #8696a0;
+  --outside-message: #3b4a54;
+  --contact-hover: #f5f6f6;
+  --chat-left-border: #d1d7db;
+  --profile-edit-title: #5474b5;
+  --profile-edit-value: #41525d;
+  --profile-form-clr: #fff;
+  --profile-edit-btn: #5474b5;
+  --contact-info-header: #41525d;
+  --contact-info-background: #fff;
+  --contact-info-title: #41525d;
+  --contact-info-about: black;
+  --login-page-background: #fff;
+  --login-page-title: #41525d;
+  --login-page-input: transparent;
+  --login-membe-clr: black;
+}
+
 .light-mode {
   --app-main-clr: #d1d7db;
   --app-primary-clr: #5474b5;

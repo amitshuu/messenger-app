@@ -9,8 +9,15 @@ import { useEffect, useState } from 'react';
 
 const UserHeader = () => {
   const { user, logoutUser, toggleProfileEdit } = useAppContext();
-  const themeFromLocalStorage = localStorage.getItem('theme');
-  const [theme, setTheme] = useState(themeFromLocalStorage || 'light-mode');
+
+  const getStorageTheme = () => {
+    let theme = 'light-theme';
+    if (localStorage.getItem('theme')) {
+      theme = localStorage.getItem('theme')!;
+    }
+    return theme;
+  };
+  const [theme, setTheme] = useState(getStorageTheme);
 
   const toggleTheme = () => {
     setTheme(theme === 'light-mode' ? 'dark-mode' : 'light-mode');
