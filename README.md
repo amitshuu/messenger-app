@@ -40,6 +40,7 @@ Messenger App is a Real Time chat application which getting updated in live usin
 - Node.js
 - Express
 - GraphQL 
+- Apollo Server
 - MongoDB
 - GraphQL Subscription.
 
