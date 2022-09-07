@@ -53,6 +53,8 @@ Messenger App is a Real Time chat application which getting updated in live usin
 - Start new chat
 - Sending messages,images,emojis.
 - See other's contacts profile info
+- Search for contacts
+- Change background chat picture
 - Toggle dark mode
 - Real time update.
 
