@@ -28,7 +28,7 @@ Messenger App is a Real Time chat application which getting updated in live usin
 
 # Built with
 
--Typescript
+- Typescript
 
 ### Client - 
 - React
