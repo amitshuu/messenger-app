@@ -28,8 +28,10 @@ Messenger App is a Real Time chat application which getting updated in live usin
 
 # Built with
 
+-Typescript
+
 ### Client - 
-- React.js
+- React
 - Apollo Client
 - React Context API
 - Styled Components
@@ -39,7 +41,7 @@ Messenger App is a Real Time chat application which getting updated in live usin
 - Express
 - GraphQL 
 - MongoDB
--GraphQL Subscription.
+- GraphQL Subscription.
 
 # Features
 
