@@ -1,4 +1,4 @@
-# Messenger Web Appliaction
+# Messenger Web Application
 > Messenger Full Stack web application.
 
 This is a sample application that demonstrates a whatsapp web application using the MERN stack.
