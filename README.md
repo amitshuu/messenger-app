@@ -11,16 +11,16 @@ Messenger App is a Real Time chat application which getting updated in live usin
 
 
 
-![screenshot](https://github.com/amitshuu/messenger-app/blob/master/uploads/Main.png)
+![screenshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/Main.png)
 
 
-![screehnshot](https://github.com/amitshuu/messenger-app/blob/master/uploads/ContactInfo.png)
+![screehnshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/ContactInfo.png)
 
 
-![screehnshot](https://github.com/amitshuu/messenger-app/blob/master/uploads/Profile.png)
+![screehnshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/Profile.png)
 
 
-![screehnshot](https://github.com/amitshuu/messenger-app/blob/master/uploads/Darkmode.png)
+![screehnshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/Darkmode.png)
 
 
 # Built with
