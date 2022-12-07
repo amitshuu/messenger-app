@@ -1,10 +1,12 @@
-# Sneakers Shop App
+# Messenger Web Application
 > Messenger Full Stack web application.
 
 This is a sample application that demonstrates a whatsapp web application using the MERN stack.
 This web appliaction allow you to search for contacts, add them to your own contact list and start a new chat with them!
 You can send messages, images, videos, and emojis!
 Messenger App is a Real Time chat application which getting updated in live using web sockets!
+
+https://www.youtube.com/watch?v=A-z_C_AhsHo
 
 ## Pictures:
 
@@ -14,7 +16,7 @@ Messenger App is a Real Time chat application which getting updated in live usin
 ![screenshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/Main.png)
 
 
-![screehnshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/ContactInfo.png)
+![screehnshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/ContactInfoTab.png)
 
 
 ![screehnshot](https://github.com/amitshuu/messenger-app/blob/main/uploads/Profile.png)
@@ -53,6 +55,8 @@ Messenger App is a Real Time chat application which getting updated in live usin
 - Start new chat
 - Sending messages,images,emojis.
 - See other's contacts profile info
+- Search for contacts
+- Change background chat picture
 - Toggle dark mode
 - Real time update.
 
