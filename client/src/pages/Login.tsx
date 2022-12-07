@@ -1,23 +1,32 @@
 import styled from 'styled-components';
 import logo_2 from '../assests/dummy_images/logo_2.png';
-import { useLazyQuery } from '@apollo/client';
+import { useLazyQuery, useMutation } from '@apollo/client';
 import { LOGIN_USER } from '../graphql/queries/userQueries';
 import { MuiAlert } from '../assests/MUI/MuiAlert';
 import { useForm } from '../utils/customHooks';
 import { MuiLoader } from '../assests/MUI/MuiLoader';
 import { useAppContext } from '../context/appContext';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { CREATE_USER } from '../graphql/mutations/userMutations';
 
 const Login = () => {
   const initialState = {
     username: '',
     password: '',
+    nickname: '',
   };
 
-  const { values, onChange, onSubmit } = useForm(loginHandler, initialState);
+  const { values, onChange, onSubmit } = useForm(
+    registerOrLoginCallback,
+    initialState
+  );
   const { loginUser: loginUserDispatch } = useAppContext();
   const navigate = useNavigate();
 
+  const [isMember, setIsMember] = useState<boolean>(true);
+
+  console.log(isMember);
   const [loginUser, { loading, error }] = useLazyQuery(LOGIN_USER, {
     onCompleted({ login }) {
       localStorage.setItem('token', login.token);
@@ -26,10 +35,18 @@ const Login = () => {
     },
   });
 
-  function loginHandler() {
-    loginUser({
+  const [registerUser, { loading: registerLoading, error: registerError }] =
+    useMutation(CREATE_USER, {
+      onCompleted({ createUser }) {
+        localStorage.setItem('token', createUser.token);
+        loginUserDispatch(createUser);
+        navigate('/');
+      },
       variables: values,
     });
+
+  function registerOrLoginCallback() {
+    return isMember ? loginUser({ variables: values }) : registerUser();
   }
 
   return (
@@ -44,7 +61,7 @@ const Login = () => {
           <HeaderText>
             To use our services you must be a registerd user
           </HeaderText>
-          <LoginTitle>LOGIN</LoginTitle>
+          <LoginTitle>{isMember ? 'Login' : 'Register'}</LoginTitle>
         </Header>
         <Form onSubmit={onSubmit}>
           <Label>Username</Label>
@@ -62,13 +79,26 @@ const Login = () => {
             type='password'
             onChange={onChange}
           />
-
-          <Button type='submit'>Login</Button>
+          {!isMember && (
+            <>
+              <Label>Nickname</Label>
+              <Input
+                value={values.nickname}
+                name='nickname'
+                type='text'
+                onChange={onChange}
+              />
+            </>
+          )}
+          <Button type='submit'>{isMember ? 'Login' : 'Register'}</Button>
         </Form>
         <Member>
           Not a member yet?{' '}
-          <span style={{ color: 'var(--clr-grey-2)', cursor: 'pointer' }}>
-            Register
+          <span
+            onClick={() => setIsMember((prevState) => !prevState)}
+            style={{ color: 'var(--clr-grey-2)', cursor: 'pointer' }}
+          >
+            {isMember ? 'Register' : 'Login'}
           </span>
         </Member>
         {loading ? (

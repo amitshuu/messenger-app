@@ -46,3 +46,25 @@ export const UPDATE_PROFILE = gql`
     }
   }
 `;
+
+export const CREATE_USER = gql`
+  mutation ($username: String!, $password: String!, $nickname: String!) {
+    createUser(username: $username, password: $password, nickname: $nickname) {
+      username
+      aboutInfo
+      nickname
+      contacts {
+        displayMessage {
+          lastMessage
+          sentAt
+        }
+        status
+        userId
+      }
+      id
+      backgroundImage
+      token
+      profileImage
+    }
+  }
+`;
