@@ -101,11 +101,13 @@ const Login = () => {
             {isMember ? 'Register' : 'Login'}
           </span>
         </Member>
-        {loading ? (
+        {loading || registerLoading ? (
           <MuiLoader />
-        ) : error ? (
+        ) : error || registerError ? (
           <Error>
-            <MuiAlert type='error'>{error.message}</MuiAlert>
+            <MuiAlert type='error'>
+              {error?.message || registerError?.message}
+            </MuiAlert>
           </Error>
         ) : (
           ''
